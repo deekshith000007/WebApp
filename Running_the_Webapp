@@ -1,58 +1,54 @@
-Go to Jenkins Dashboard 
-
-Dashboard -> New Item ->
-Enter and item name
-WebApp
-Maven Project
-OK
--------------------------------------------------------------------
+Setting Up a Jenkins Maven Project for GitHub Integration and SSH Deployment
+```
+1. Go to the Jenkins Dashboard.
+2. Click New Item.
+3. Enter the item name: WebApp.
+4. Select Maven Project.
+5. Click OK.
+```
+```
 Source Code Management
-Git
-
-Repositories
-
-Repository URL: https://github.com/deekshith000007/WebApp.git
-Credentials :- none -
-
-Advanced
-
-Add Repository
-Branches to build
-Branch Specifier (blank for 'any') : main
---------------------------------------------------------------------
-
+1. Select Git.
+2. Under Repositories:
+   Repository URL: https://github.com/deekshith000007/WebApp.git
+   ->Credentials: None
+3. Click Advanced to add repository details.
+4. Under Branches to build:
+   ->Branch Specifier (blank for 'any'): main
+```
+```
 Build Triggers
-*GitHub hook trigger for GITScm polling*
-
---------------------------------------------------------------------
+1. Check GitHub hook trigger for GITScm polling.
+```
+```
 Build
-Maven Version : pom.xml
-Goals and options : clean install
---------------------------------------------------------------------
+1. Root POM: pom.xml
+2. Goals and options: clean install
+```
+```
 Build Settings
-E-mail Notification
-Recipients : anygmail.com
-*Send e-mail for every unstable build*
-*Send separate e-mails to individuals who broke the build*
-*Send e-mail for each failed module*
---------------------------------------------------------------------
+1. E-mail Notification:
+   ->Recipients: anygmail.com
+   ->Check Send e-mail for every unstable build.
+   ->Check Send separate e-mails to individuals who broke the build.
+   ->Check Send e-mail for each failed module.
+```
+```
 Post-build Actions
-Add post-build action
-
-Send build artifacts over SSH
-SSH Publishers
-
-SSH Server
-Name : dockerhost
-
-Advanced
-Transfers
-Transfer Set
-Source files: webapp/target/*.war
-Remove prefix: webapp/target
-Remote directory: //opt//tomcat
-
-Exec command:
+1. Click Add post-build action.
+2. Select Send build artifacts over SSH.
+3. Under SSH Publishers:
+   ->SSH Server:
+         ->Name: dockerhost
+```
+```
+Advanced Settings for SSH Publishers
+1. Transfers:
+   ->Transfer Set:
+        ->Source files: webapp/target/*.war
+        ->Remove prefix: webapp/target
+        ->Remote directory: /opt/tomcat
+2. Exec command:
 #!/bin/bash
 # Change to the directory containing the Dockerfile
 cd /opt/tomcat
@@ -68,5 +64,5 @@ docker run -it -d --name webapp -p 8082:8080 app:v1 /bin/bash
 sleep 10
 # Attach to the running container and start Tomcat
 docker exec webapp bash -c 'cd /usr/local/tomcat/bin && ./startup.sh'
------------------------------------------------------------------------
 ```
+
