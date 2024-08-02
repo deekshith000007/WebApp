@@ -12,6 +12,6 @@
 
 
 - Reference Files
--  Jenkins Setup: Jenkins_setup.md
--  Docker Setup: Docker_setup.md
--  Setting Up the WebApp: Last_step.md and Running_the_Webapp.md
+  -  Jenkins Setup: Jenkins_setup.md
+  -  Docker Setup: Docker_setup.md
+  -  Setting Up the WebApp: Last_step.md and Running_the_Webapp.md
