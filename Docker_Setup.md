@@ -26,7 +26,7 @@ usermod -aG docker dockeradmin
 ```
 Enabling and Starting the Docker service
 ```
-sudo sytemctl enable docker
+sudo systemctl enable docker
 sudo systemctl start docker
 sudo systemctl status docker
 ```
