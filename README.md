@@ -12,6 +12,6 @@ This guide provides a step-by-step process for setting up a Docker environment, 
 - **Deploying WebApp**: Building and deploying the WebApp using Docker and Jenkins, with post-build actions to manage Docker containers.
 
 ## For reference you can use these files:
-- **for jenkins: Jenkins_setup.md**
-- **for Docker : Docker_setup.md**
+- **For jenkins: Jenkins_setup.md**
+- **For Docker : Docker_setup.md**
 - **Setting Up the Webapp : Last_setp.md and Running_the_Webapp**
