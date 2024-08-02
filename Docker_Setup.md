@@ -30,11 +30,11 @@ sudo systemctl enable docker
 sudo systemctl start docker
 sudo systemctl status docker
 ```
-creating Directory with Tomacat(u can give anyname)
+Creating Directory name with Tomacat
 ```
  mkdir tomcat
 ```
-Chaning the owenship to dockeradmin
+Changing the owenship to dockeradmin
 ```
 chown -R dockeradmin:dockeradmin tomcat
 ```
