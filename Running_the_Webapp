@@ -1,0 +1,70 @@
+Go to Jenkins Dashboard 
+```
+Dashboard -> New Item ->
+Enter and item name
+WebApp
+Maven Project
+OK
+-------------------------------------------------------------------
+Source Code Management
+Git
+
+Repositories
+Repository URL: https://github.com/deekshith000007/WebApp.git
+Credentials :- none -
+
+Advanced
+
+Add Repository
+Branches to build
+Branch Specifier (blank for 'any') : main
+--------------------------------------------------------------------
+
+Build Triggers
+*GitHub hook trigger for GITScm polling*
+
+--------------------------------------------------------------------
+Build
+Maven Version : pom.xml
+Goals and options : clean install
+--------------------------------------------------------------------
+Build Settings
+E-mail Notification
+Recipients : anygmail.com
+*Send e-mail for every unstable build*
+*Send separate e-mails to individuals who broke the build*
+*Send e-mail for each failed module*
+--------------------------------------------------------------------
+Post-build Actions
+Add post-build action
+
+Send build artifacts over SSH
+SSH Publishers
+
+SSH Server
+Name : dockerhost
+
+Advanced
+Transfers
+Transfer Set
+Source files: webapp/target/*.war
+Remove prefix: webapp/target
+Remote directory: //opt//tomcat
+
+Exec command:
+#!/bin/bash
+# Change to the directory containing the Dockerfile
+cd /opt/tomcat
+# Build the Docker image with the tag 'app:v1'
+docker build -t app:v1 .
+# Stop the running container named 'webapp' if it exists
+docker stop webapp 
+# Remove the container named 'webapp' if it exists
+docker rm webapp
+# Run a new container from the 'app:v1' image
+docker run -it -d --name webapp -p 8082:8080 app:v1 /bin/bash
+# Wait for the container to be fully up and running
+sleep 10
+# Attach to the running container and start Tomcat
+docker exec webapp bash -c 'cd /usr/local/tomcat/bin && ./startup.sh'
+```
