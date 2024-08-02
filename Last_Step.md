@@ -28,7 +28,7 @@ Configuring System Settings in Jenkins: Email Notification and Publish Over SSH
    *Use SMTP Authentication: Check this box.
       ->User Name: deekshith000007@gmail.com
       ->Password: Enter your email password.
-      ->Use SSL: Check this box.
+    *Use SSL: Check this box.
       ->SMTP Port: 465
       ->Reply-To Address: noreply@gmail.com
       ->Use TLS: (Ensure this is checked or configure as needed.)
