@@ -1,4 +1,4 @@
--> Jenkins  download 
+Jenkins  download 
 ```
 #!/bin/bash
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
@@ -12,15 +12,15 @@ sudo systemctl daemon-reload
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 ```
--> Install Git
+Install Git
 ```
 yum install git -y
 ```
--> Setting up and configuring Jenkins in the browser
+Setting up and configuring Jenkins in the browser
 ```
 Jenkins-Server-IPaddress:8080
 ```
--> In the terminal to get the password of jenkins
+In the terminal to get the password of jenkins
 ```
 cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
