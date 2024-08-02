@@ -10,7 +10,7 @@ Source Code Management
 Git
 
 Repositories
-```
+
 Repository URL: https://github.com/deekshith000007/WebApp.git
 Credentials :- none -
 
@@ -18,7 +18,7 @@ Advanced
 
 Add Repository
 Branches to build
-Branch Specifier (blank for 'any') : main```
+Branch Specifier (blank for 'any') : main
 --------------------------------------------------------------------
 
 Build Triggers
