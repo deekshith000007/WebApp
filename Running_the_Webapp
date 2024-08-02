@@ -5,32 +5,34 @@ Enter and item name
 WebApp
 Maven Project
 OK
+```
 -------------------------------------------------------------------
 Source Code Management
 Git
 
 Repositories
+```
 Repository URL: https://github.com/deekshith000007/WebApp.git
 Credentials :- none -
-
+```
 Advanced
 
 Add Repository
 Branches to build
-Branch Specifier (blank for 'any') : main
+```Branch Specifier (blank for 'any') : main```
 --------------------------------------------------------------------
 
 Build Triggers
-*GitHub hook trigger for GITScm polling*
+```*GitHub hook trigger for GITScm polling*```
 
 --------------------------------------------------------------------
 Build
-Maven Version : pom.xml
-Goals and options : clean install
+```Maven Version : pom.xml
+Goals and options : clean install```
 --------------------------------------------------------------------
 Build Settings
 E-mail Notification
-Recipients : anygmail.com
+```Recipients : anygmail.com```
 *Send e-mail for every unstable build*
 *Send separate e-mails to individuals who broke the build*
 *Send e-mail for each failed module*
@@ -42,17 +44,17 @@ Send build artifacts over SSH
 SSH Publishers
 
 SSH Server
-Name : dockerhost
+```Name : dockerhost```
 
 Advanced
 Transfers
 Transfer Set
-Source files: webapp/target/*.war
+```Source files: webapp/target/*.war
 Remove prefix: webapp/target
-Remote directory: //opt//tomcat
+Remote directory: //opt//tomcat```
 
 Exec command:
-#!/bin/bash
+```#!/bin/bash
 # Change to the directory containing the Dockerfile
 cd /opt/tomcat
 # Build the Docker image with the tag 'app:v1'
@@ -66,6 +68,6 @@ docker run -it -d --name webapp -p 8082:8080 app:v1 /bin/bash
 # Wait for the container to be fully up and running
 sleep 10
 # Attach to the running container and start Tomcat
-docker exec webapp bash -c 'cd /usr/local/tomcat/bin && ./startup.sh'
+docker exec webapp bash -c 'cd /usr/local/tomcat/bin && ./startup.sh'```
 -----------------------------------------------------------------------
 ```
