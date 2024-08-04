@@ -26,7 +26,7 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 Installing and Setting up the Apache Maven
 ```
-official website: https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz
+official website: https://maven.apache.org/download.cgi
 
 wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 
