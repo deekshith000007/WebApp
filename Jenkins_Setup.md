@@ -1,4 +1,5 @@
 Jenkins  download 
+official Website :https://www.jenkins.io/doc/book/installing/linux/
 ```
 #!/bin/bash
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
