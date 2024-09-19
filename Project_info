@@ -21,14 +21,11 @@ Note : Since the Password has a overall control over you gmail account disclosin
 • select Test configuration mail
 • Test e-mail recipient : <enter recipient email id >
 click on test configuration which will send a test mail to the recipient e-mail id
- 
- 
-xhuk ltkq foum kjsz
+  xhuk ltkq foum kjsz
 
     
 2) Setting up the jenkins server 
- 
-run the script 
+ run the script 
 
 #!/bin/bash
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
@@ -69,13 +66,7 @@ ref: https://maven.apache.org/install.html
  
  Pom file: details 
  https://maven.apache.org/guides/introduction/introduction-to-the-pom.html
- 
  configuring in the Jenkins
-
-
-
-
-
 
 additional:
 access tomcat application from browser on port 8080
