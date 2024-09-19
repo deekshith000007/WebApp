@@ -11,7 +11,3 @@
   -  Deploying WebApp: Building and deploying the WebApp using Docker and Jenkins, with post-build actions to manage Docker containers.
 
 
-- Reference Files
-  -  Jenkins Setup: Jenkins_Setup.md
-  -  Docker Setup: Docker_Setup.md
-  -  Setting Up the WebApp: Last_Step.md and Running_the_Webapp.md
