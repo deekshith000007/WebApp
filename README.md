@@ -1,13 +1,24 @@
-# WebApp Deployment with Docker, Jenkins, and GitHub
+WebApp Deployment with Docker, Jenkins, and GitHub
+This guide outlines a comprehensive step-by-step process for setting up a Docker environment, configuring Jenkins for continuous integration and deployment, and deploying a web application using Docker containers.
 
-- This guide provides a step-by-step process for setting up a Docker environment, creating and managing a Docker user, configuring Jenkins for continuous integration and deployment, and deploying a web application using Docker containers.
+Overview
+1. Installing Docker
+Learn how to install Docker on your server to create a robust containerization environment.
 
-- Overview
-  -  Installing Docker: Steps to install Docker on your server.
-  -  Creating Docker User: Instructions to create and configure a Docker user.
-  -  Enabling SSH Password Authentication: How to enable SSH password authentication.
-  -  Managing Docker Service: Enabling and starting Docker service.
-  -  Setting up Jenkins: Installing Jenkins, configuring it for Maven and GitHub integration, and setting up a webhook.
-  -  Deploying WebApp: Building and deploying the WebApp using Docker and Jenkins, with post-build actions to manage Docker containers.
+2. Creating a Docker User
+Follow instructions to create and configure a dedicated Docker user for enhanced security and management.
 
+3. Enabling SSH Password Authentication
+Get guidance on enabling SSH password authentication to facilitate secure access to your server.
 
+4. Managing Docker Service
+Understand how to enable and start the Docker service, ensuring it runs smoothly in the background.
+
+5. Setting Up Jenkins
+Installing Jenkins: Step-by-step instructions for installing Jenkins.
+Configuring for Maven and GitHub Integration: Set up Jenkins to work seamlessly with Maven and GitHub.
+Setting Up a Webhook: Learn how to configure webhooks to automate builds on code changes.
+6. Deploying the WebApp
+Building the WebApp: Use Jenkins to build your application.
+Deploying with Docker: Learn how to deploy your web application using Docker containers.
+Post-Build Actions: Manage Docker containers effectively after the build process.
