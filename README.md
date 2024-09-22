@@ -15,10 +15,10 @@ Get guidance on enabling SSH password authentication to facilitate secure access
 Understand how to enable and start the Docker service, ensuring it runs smoothly in the background.
 
 5. Setting Up Jenkins
-Installing Jenkins: Step-by-step instructions for installing Jenkins.
-Configuring for Maven and GitHub Integration: Set up Jenkins to work seamlessly with Maven and GitHub.
-Setting Up a Webhook: Learn how to configure webhooks to automate builds on code changes.
+Installing Jenkins: Step-by-step instructions for installing Jenkins.<br>
+Configuring for Maven and GitHub Integration: Set up Jenkins to work seamlessly with Maven and GitHub.<br>
+Setting Up a Webhook: Learn how to configure webhooks to automate builds on code changes.<br>
 6. Deploying the WebApp
-Building the WebApp: Use Jenkins to build your application.
-Deploying with Docker: Learn how to deploy your web application using Docker containers.
+Building the WebApp: Use Jenkins to build your application.<br>
+Deploying with Docker: Learn how to deploy your web application using Docker containers.<br>
 Post-Build Actions: Manage Docker containers effectively after the build process.
